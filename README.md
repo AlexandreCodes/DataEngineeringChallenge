@@ -22,7 +22,6 @@ docker-webetlapp
 │   requirements.txt
 │   dockerfile
 │   docker-compose.yml 
-│   nginx.conf
 │   run_program.bat
 └─── files
 │   │   trips.csv
@@ -42,7 +41,7 @@ http://localhost:4000/region/<region>/<file_name>
 For the coordinates one, you must specify the parameters as such:
 - <origindest> = "origin" or "dest". Lower and upper limits applied to origin or destination lat and lon coordinates
 - <upper_v_lat> = Upper limit for latitude EX: 14.858954546
-- <lower_v_lat> = Lower limit for latitude EX: 5.8987646845
+- <lowerr_v_lat> = Lower limit for latitude EX: 5.8987646845
 - <upper_v_lon> = Upper limit for longitude EX: 14.858954546
 - <lower_v_lon> = Lower limit for longitude EX: 5.8987646845
 - <file_name> = Exact file name on the "files folder" without .csv suffix. EX: trips.csv -> trips
@@ -56,6 +55,8 @@ Sample Requests:
 http://localhost:4000/region/Prague/trips
 http://localhost:4000/coordinates/origin/55.98756/4.5487457/60.6547854/5.654784589/trips
 ```
+
+*Since it will return a html, you should execute this request on any browser you prefer. By the end of the extraction, a message will be displayed to you on the page.*
 
 ## Output
 
