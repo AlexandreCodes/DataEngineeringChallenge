@@ -1,0 +1,17 @@
+version: "3.9"  
+services:
+  webetlapp:
+    build: .
+    expose:
+      - "5000"
+    volumes:
+      - ./files:/files
+      - ./database:/database
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - webetlapp
+    ports:
+      - "4000:4000"
