@@ -26,7 +26,6 @@ docker-webetlapp
 │   run_program.bat
 └─── files
 │   │   trips.csv
-│   │   trips_large.csv
 └───database
     │   trips.db
 ```
