@@ -125,7 +125,6 @@ def tolerance_func(origindest, upper_v_lat, lower_v_lat, upper_v_lon, lower_v_lo
 @app.route('/region/<region>/<file_name>', methods=['GET'])
 def region_func(region,file_name):
     table_name = "weekly_trips_by_region"
-    execution_date = datetime.datetime.now()
     df = extract(file_name)
     df = transform_region(df, region)
     load(df, table_name)
